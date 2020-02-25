@@ -4,11 +4,15 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>IUADigEd @ UL - Pilot Phase 2 Consultations</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- spreadsheet plugin -->
+   		<script src="reveal.js-plugins/spreadsheet/ruleJS.all.full.min.js"></script>
+   		<link rel="stylesheet" href="reveal.js-plugins/spreadsheet/spreadsheet.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -309,6 +313,7 @@
 			Reveal.initialize({
 				hash: true,
 				dependencies: [
+					{ src: 'reveal.js-plugins//spreadsheet/spreadsheet.js' },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/highlight/highlight.js' },
