@@ -6,9 +6,9 @@
 
 ### Initial Group Consultations
 PESS - https://daveymoloney.github.io/slides/01-consultation 
-MSc in Machine Learning and Finance  -
-School of Allied Health - 
-Product Design and Technology -
-Management and Marketing -
-Irish World Academy of Music and Dance -
-Medical Exercise - 
+<br>MSc in Machine Learning and Finance  -
+<br>School of Allied Health - 
+<br>Product Design and Technology -
+<br>Management and Marketing -
+<br>Irish World Academy of Music and Dance -
+<br>Medical Exercise - 
