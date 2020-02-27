@@ -5,7 +5,7 @@
 ## Consultations
 
 ### Initial Group Consultations
-PESS - https://daveymoloney.github.io/slides/01-consultation 
+Physical Education & Sports Science - <a href=https://daveymoloney.github.io/slides/01-consultation-PESS/>slides</a>
 <br>MSc in Machine Learning and Finance  -
 <br>School of Allied Health - 
 <br>Product Design and Technology -
