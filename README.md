@@ -15,4 +15,4 @@ Physical Education & Sports Science - <a href="https://daveymoloney.github.io/sl
 
 
 ## Presentations to LT Forum
-10 March 2020 - <a href="" target="_blank">slides 🎞</a>
+10 March 2020 - <a target="_blank">slides 🎞</a>
