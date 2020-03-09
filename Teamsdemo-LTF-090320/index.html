@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>IUADigEd @ UL - Pilot Phase 2 Presentation to Digital Design group</title>
+		<meta name="author" content="David Moloney - https://daveymoloney.com">
+		<meta name="author" content="University of Limerick">
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="scrollable.css">
+
+		<!-- spreadsheet plugin -->
+   		<script src="plugin/spreadsheet/ruleJS.all.full.min.js"></script>
+   		<link rel="stylesheet" href="plugin/spreadsheet/spreadsheet.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+											<!--BEGIN-->
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Teams Demo</h1>
+				</section>
+
+				<section>
+					<h2>Overview</h2>
+					<ul>
+						<li class="fragment">Channel Notification Settings</li>
+						<li class="fragment">Channels and Tabs</li>
+						<li class="fragment">Viewing Posts & Replying</li>
+						<li class="fragment">The Editor - Posting</li>
+						<li class="fragment">The Editor - Advanced</li>
+						<li class="fragment">Add-on applications</li>
+						<li class="fragment">Help -> Training</li>
+					</ul>
+				</section>
+
+
+				<section id="thank-you" data-background-image="img/DM1.png">
+				<div style="position:absolute; margin: 0 auto; width: 40%; top: 100; right: 0; left: 0; color: #fff; background-color: rgba(37,40,61,0.9); padding:0.25em 0; font-size:90%;" class="fragment">Thank You</div>
+				</section>
+
+				<section id="q&a" data-background-image="img/ul3.png">
+				<h1>Questions?</h1>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+
+				dependencies: [
+					{ src: 'plugin/spreadsheet/spreadsheet.js' },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+			
+			]
+
+			});
+		</script>
+	</body>
+</html>
