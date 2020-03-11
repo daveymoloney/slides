@@ -270,6 +270,17 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: true,
+				audio: {
+					prefix: 'audio-slideshow/',
+					suffix: '.ogg',
+					defaultDuration: 5,
+					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+					advance: 500,
+					autoplay: false,
+					defaultNotes: true,
+					defaultText: false,
+					playerOpacity: 0.2,
+				},
 
 				dependencies: [
 					{ src: 'plugin/spreadsheet/spreadsheet.js' },
@@ -281,7 +292,12 @@
 					{ src: 'plugin/audio-slideshow/RecordRTC.js', condition: function( ) { return !!document.body.classList; } },				
 					{ src: 'plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
 					{ src: 'plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
-			]
+			],
+				keyboard: { 
+					82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+					90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+					84: function() { Recorder.fetchTTS(); } 	// press 't' to fetch TTS audio files
+  				}
 
 			});
 		</script>
