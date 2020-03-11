@@ -269,17 +269,7 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: true,
-
-				dependencies: [
-					{ src: 'plugin/spreadsheet/spreadsheet.js' },
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-					{ src: 'plugin/menu/menu.js' }
-			
-
-			menu: {
+				menu: {
 		// Specifies which side of the presentation the menu will 
 		// be shown. Use 'left' or 'right'.
 		side: 'left',
@@ -391,6 +381,14 @@
 		// and the menu will not attempt to load the font-awesome library.
 		loadIcons: true
 	},
+	
+				dependencies: [
+					{ src: 'plugin/spreadsheet/spreadsheet.js' },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: 'plugin/menu/menu.js' }
 	
 	]
 
