@@ -270,16 +270,21 @@
 			Reveal.initialize({
 				hash: true,
 				slideNumber: true,
-				audio: {
-					prefix: 'audio-slideshow/',
-					suffix: '.ogg',
-					defaultDuration: 5,
-					textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
-					advance: 500,
-					autoplay: false,
-					defaultNotes: true,
-					defaultText: false,
-					playerOpacity: 0.2,
+	//			audio: {
+	//				<!-- prefix: 'audio-slideshow/',
+	//				suffix: '.ogg',
+	//				defaultDuration: 5,
+	//				textToSpeechURL: "http://api.voicerss.org/?key=[YOUR_KEY]&hl=en-gb&c=ogg&src=",
+	//				advance: 500,
+	//				autoplay: false,
+	//				defaultNotes: true,
+	//				defaultText: false,
+	//				playerOpacity: 0.2,
+	//			},
+
+				menu: {
+					numbers: true,
+					openSlideNumber: true,
 				},
 
 				dependencies: [
