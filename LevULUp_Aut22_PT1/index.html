@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="/dist/reveal.css" />
+    <link rel="stylesheet" href="/dist/theme/mattropolis.css" id="theme" />
+    <link rel="stylesheet" href="/plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="/css/layout.css" />
+	<link rel="stylesheet" href="/plugin/customcontrols/style.css">
+
+
+    <script defer src="/dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="/logo_1-2H1.jpeg" alt="" style="width: 450px; object-fit: fill">
+
+# AUTUMN 2022
+### Presenter Team Check-in Meeting
+#### Friday 16th Sept. 2022
+#### David Moloney
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# THANK YOU
+A renewed <mark>thank you</mark> for your ongoing commitment to student digital skills and competence development through the LevUL Up programme.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# OUTLINE   
+1.  GENERAL DETAILS
+2.  WEBSITE
+3.  OUTSTANDING TASKS
+4.  ROOMS
+5.  WORKSHOP SLIDES, ETC.
+6.  WORKSHOP BOOKINGS
+7.  FEEDBACK FORM
+8.  RECORDING & ATTENDANCE
+9.  PROMOTION
+10.  Q&A
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# GENERAL DETAILS
+- Autumn 2022 has 2 parts:
+	1. Digital Skills Awareness Course on Sulis (live now),
+	2. Calendar of Live Workshops (*loading…*)
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Workshops run for <mark>**3 weeks between AW7-9, Monday 17 Oct. - Friday 4 Nov.**</mark>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# WE’RE HIRING
+
+- [LevUL Up Student Internship](https://bit.ly/levulupjob). Application Deadline is today.
+<img src="/Student-Internship_Autumn2022-Znj.jpeg" alt="" style="width: 400px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# WEBSITE
+- Needs to be rebuilt from scratch.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# ROOMS
+## IN-PERSON LEVUL UP HQs
+- Graduate Attributes Hub Teaching Space
+- Large IT Training Room, GL0 - 046
+- GL0 - 068 (PENDING)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# OUTSTANDING TASKS
+1.  Watch the [Intro. Video for Presenters](https://www.loom.com/share/3eca83c7eebd46c7908b32c631d88091).
+1. &shy;<!-- .element: class="fragment" data-fragment-index="1" -->In the ‘Workshop Planning’ spreadsheet on Teams, ensure details are accurate:
+	- title, description, duration, preferred room, who will book the room for you, etc.
+	- Specify in the ‘Workshop Details’ tab if you would like me to book your preferred room on your behalf.
+1. &shy;<!-- .element: class="fragment" data-fragment-index="2" --> Please ensure your preferred room is available at the time you choose for your in-person workshop(s).
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# SLIDES, ETC.
+I will upload your materials to the website in advance of your workshop, so attendees (and others) can access. Let me know if only making available to attendees.
+- If presenting your workshop in AW7, at latest please upload to Teams folder by AW6 (10-14 Oct.)
+- If AW8, please upload to Teams folder by AW7 (17-21 Oct.)
+- If AW9, please upload to Teams folder by AW8 (24-28 Oct.)
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# REGISTRATION
+-  Moving from Microsoft Bookings → Teams for registration.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->I will set up registration links for your online workshops.
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Specify in the ‘Workshop Details’ tab if you would like me to book your preferred room on your behalf.
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+- Upon registration, registrants receive a confirmation email containing
+	- workshop title, description, presenter, etc.,
+	- a calendar invitation,
+	- Microsoft Teams workshop link.
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Reminders handled differently from last semester.
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# POST-WORKSHOP
+- Presenter sends registrants an email to close the loop.
+- I will add an email template to Teams for you to amend and use.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# FEEDBACK FORMS
+- I will provide a link to a LevUL Up Autumn 2022 Feedback Form
+- For distribution at the end of all workshops scheduled during AW8 & AW9
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# RECORDING & ATTENDANCE (1)
+- Recordings to be taken of all online workshops
+- If I set up the workshop slot for you, recordings should go to OneDrive and Panopto. 
+- <mark>Recording of in-person workshops at discretion of each presenter….</mark>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# RECORDING & ATTENDANCE(2)
+- *Online:* Teams provides an accurate attendance list after an online workshop. Presenters can add the figure for attendance into the central spreadsheet.
+
+- *In-person:* Sign-in sheet for attendees?
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# PROMOTION (1)
+- Slide during presentations at Orientation next week
+- Email blasts to students; posts to UL Connect for staff
+- Social media - Instagram, TikTok
+	- <mark>Please continue to ask your divisions/centres to amplify posts to reach as many students as possible</mark>
+- F7W to promote LevUL Up during AW9 (31 Oct. - 4 Nov.), their week themed ‘Skills for Academic Success’
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# PROMOTION (2)
+<img src="/levulup_loading1_1.png" alt="" style="object-fit: scale-down">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="/levulup_loading1_2.png" alt="" style="object-fit: scale-down">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Q&A
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# THANK YOU
+</div></script></section></div>
+    </div>
+
+    <script src="/dist/reveal.js"></script>
+
+    <script src="/plugin/markdown/markdown.js"></script>
+    <script src="/plugin/highlight/highlight.js"></script>
+    <script src="/plugin/zoom/zoom.js"></script>
+    <script src="/plugin/notes/notes.js"></script>
+    <script src="/plugin/math/math.js"></script>
+	<script src="/plugin/mermaid/mermaid.js"></script>
+	<script src="/plugin/chart/chart.min.js"></script>
+	<script src="/plugin/chart/plugin.js"></script>
+	<script src="/plugin/menu/menu.js"></script>
+	<script src="/plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: '/plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
