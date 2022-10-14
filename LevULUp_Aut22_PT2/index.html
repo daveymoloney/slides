@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/consult.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="logo_1-2H1.jpeg" alt="" style="width: 450px; object-fit: fill">
+
+# AUTUMN 2022
+### Presenter Team Final Check-in Meeting
+#### Friday 14th Oct. 2022
+#### David Moloney
+<div class="callout callout-color2">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-fire-alt" ></i>
+
+</div>
+<div class="callout-title-inner">
+
+Tip
+
+</div>
+</div>
+<div class="callout-content">
+
+Use your keyboard spacebar to progress sequentially. ‘P’ to go backward. ‘F’ for fullscreen. ‘M’ to open the slide menu.
+
+</div>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# THANK YOU
+A renewed <mark>thank you</mark> for your ongoing commitment to student digital skills and competence development through the LevUL Up programme. Together, we’ve already come a distance to get to where we are.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# OUTLINE    
+1. WELCOME NEW COLLEAGUES
+2. WEBSITE 
+3. OUTSTANDING ITEMS
+4. REGISTRATION
+5. ATTENDANCE
+6. RECORDINGS & CAPTIONING
+7. FEEDBACK FORM
+8. PROMOTION
+9. BITS OF ADVICE
+10. Q&A
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 1. WELCOME NEW COLLEAGUES
+### Cynthia Anthony, LevUL Up Student Intern
+### Eamonn T. Fitzgerald, ITD
+### Louise O’Shea, Library
+### Ryan O’Keeffe and James Hourigan, Library Makerspace
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 2. WEBSITE
+- [Click to view the LevUL Up website](https://bit.ly/levulup)
+- Each of us have workshop webpages on it. Details copied over to them from the Workshop Planning spreadsheet on Teams
+- All booking links are available there
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 3. OUTSTANDING ITEMS
+1. Confirm all Room Bookings
+2. Upload your Workshop Slides/Materials to our Teams space [Workshop Slides Folder](https://ulcampus.sharepoint.com/:f:/s/ULLevULUpAutumn22Presenters/EoN6H0fTiVBLvIyk4zO7CbYBPS6kbpZ6A-cZYJFQfYBQWQ?e=098Kld)
+3. Review [your own workshop webpages](https://www.ul.ie/ctl/students/levul-student-digital-skills-development-programme/autumn-2022-workshops) to ensure all details, dates, timings, etc. are accurate. If not, let me know ASAP
+4. [Upload a profile pic](https://ulcampus.sharepoint.com/:f:/s/ULLevULUpAutumn22Presenters/EmeEYMhzfM1GoU_anTcCZ_MBpmuwbV3FC611a0PVdVXSjg?e=zZ8HlW) of yourself into the Profile Pics folder
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# ROOM BOOKINGS
+## 2 IN-PERSON LEVUL UP HQs
+- Special Collections Training Room, GL0 - 068
+- Large IT Training Room, GL0 - 046
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# SLIDES, ETC.
+I will upload your materials to the website in advance of your workshop, so attendees (and others) can access. Let me know if only making available to attendees.
+- If presenting your workshop in our week #1 at latest please upload to Teams folder by AW6 (10-14 Oct.)
+- If presenting in our week #2, please upload to Teams folder by AW7 (17-21 Oct.)
+- If presenting in our week #3, please upload to Teams folder by AW8 (24-28 Oct.)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 4. REGISTRATION
+- For our Online workshops → Teams Registration Form
+- For our In-person workshops → Microsoft Bookings Registration Form (2 hours buffer)
+- For Library workshops offered via LevUL Up → Direct links from LevUL Up website to LibCal
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Upon registration, registrants will receive a confirmation email with details, links, etc.
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Reason for using Bookings for in-person is because currently, Teams Registration Forms cannot limit the number of signups. This function is a necessity for our in-person workshops which can only cater to available room capacity.
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->As in previous semesters,  from next week on I will post daily registration lists for our workshops
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# REMINDERS
+- Teams Online → Their calendar invitation will notify registrants 15 mins beforehand
+- Microsoft Bookings In-person → I have set up 2 reminder emails for in-person workshops: 2 hours beforehand and 15 mins beforehand
+- LibCal
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 5. ATTENDANCE
+- *Online:* Teams provides an accurate attendance list after an online workshop. Can all Presenters add the figure into the central Attendance spreadsheet using the tab in Teams.
+
+- *In-person:* Sign-in sheet for attendees? Can all Presenters add the figure into the central Attendance spreadsheet using the tab in Teams.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# POST-WORKSHOP
+- Presenters send all registrants an email to close the loop.
+- I have added an email template to Teams for you to amend and use.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 6. RECORDINGS & CAPTIONING
+- <mark>**Recordings to be taken of all online workshops.**</mark>
+- Recording of in-person workshops at discretion of each presenter.
+- Our workshop recordings should be properly captioned before making them available to the campus community.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 7. FEEDBACK FORM
+- Next week, I will provide a link to a LevUL Up Autumn 2022 Feedback Form.
+- For distribution at the end of all workshops scheduled during our week #2 and #3
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 8. PROMOTION
+- Email blasts from CTL direct to students; posts to UL Connect for staff
+- Social media - Instagram, TikTok, Twitter. <mark>Thank you for continuing to amplify</mark>
+- Digital Screens in Library
+- Sulis Homepage
+- F7Ws initiative are further promo’ing LevUL Up for us the to student body, especially on their socials.
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 9. BITS OF ADVICE
+<div class="callout callout-color-default">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-pencil-alt" ></i>
+
+</div>
+<div class="callout-title-inner">
+
+ i usually post this in the chat area before i start my online workshops
+
+</div>
+</div>
+<div class="callout-content">
+
+Hello everyone and welcome to this LevUL Up live online workshop. It will begin in a moment. Details and materials for today’s workshop are available from the workshop webpage on the LevUL Up website: [Autumn 2022 Workshops](https://www.ul.ie/ctl/students/levul-student-digital-skills-development-programme/autumn-2022-workshops)
+
+</div>
+</div>
+
+
+- If possible, have someone moderate the chat area while you present
+- &shy;<!-- .element: class="fragment" data-fragment-index="1" -->Share links in the chat area - have them pre-prepared to copy+paste in
+- &shy;<!-- .element: class="fragment" data-fragment-index="2" -->Remember to record (or pre-record) at least 1 of your workshops
+- &shy;<!-- .element: class="fragment" data-fragment-index="3" -->Flag the session you will be recording with attendees at the beginning (use the slide in the slide template I have provided)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 10. Q&A  
+## THANK YOU
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
