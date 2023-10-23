@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/consult.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Atlas/Utilities/Images/LevULUp-logo-full-solid-ulgreen.png" alt="" style="width: 350px; object-fit: fill">
+
+# Intro to LinkedIn Learning for Students
+
+## David Moloney
+
+<div class="callout callout-color2">
+<div class="callout-title">
+<div class="callout-icon">
+
+<i class="fas fa-fire-alt" ></i>
+
+
+</div>
+<div class="callout-title-inner">
+
+Tip
+
+</div>
+</div>
+<div class="callout-content">
+
+Use your keyboard spacebar to progress sequentially. ‘P’ to go backward. ‘F’ for fullscreen. ‘M’ to open the slide menu.
+
+</div>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Atlas/Utilities/Images/LevULUp_LiL_WelcomeSlide.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Atlas/Utilities/Images/LevULUp_LiL_RecordingSlide.png" alt="" style="object-fit: scale-down">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Licence Info.
+<img src="Atlas/Utilities/Images/CC-BY-NC.png" alt="" style="object-fit: scale-down">
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/)
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Who I Am 
+|David Moloney|
+| --- |
+|Digital Skills Development Lead, CTL|
+<img src="Atlas/Utilities/Images/DM_IUA1.png" alt="" style="width: 250px; object-fit: fill">
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+## Outline
+1. Accessing and Logging into LinkedIn Learning
+2. Navigating the LinkedIn Learning interface and setting a learning goal
+3. Searching and filtering the library for particular courses or videos
+4. Navigating and viewing a course and understanding the playback options
+5. Downloading and using course exercise files
+6. Saving videos and creating a custom collection (playlist)
+7. Sharing collections, courses and videos with other users
+8. Viewing learning history and accessing certificates of completion
+</div>
+
+<aside class="notes"><p>the University of Limerick, through its UL@Work funding, has subscribed to LinkedIn Learning. The UL@Work project, which is being led by Graduate &amp; Professional Studies in UL, have procured LinkedIn Learning and made it available to all staff and students of the University. So as long as you are a student of UL you will have access to the content LinkedIn Learning for free.
+Normally, if you didn’t have free access to LinkedIn Learning as a UL student, it would cost you between €20-40 depending on whether you subscribe to an annual or a monthly subscription plan. So it’s a really excellent resource to have at your fingertips for free.
+If you’re not aware, LinkedIn Learning is owned by Microsoft. Some years ago LinkedIn acquired Lynda.com, which was an online course platform, and in 2016 Microsoft acquired LinkedIn, including LinkedIn Learning for over 26billion US$. LinkedIn Learning currently has a library of over 13,000 videos to choose from, you can watch a five minute introductions to something or complete an entire course when you want, where you want. New courses are added each week making it possible for you to stay up to date with new developments and technologies through videos taught by recognised industry experts.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 1. Accessing and Logging into LinkedIn Learning
+
+## [Direct Activation Link](https://www.linkedin.com/learning-login/jit?account=112947202&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%3Fu%3D112947202&channelType=JIT_INVITATION&authModeId=6867042117412286464)
+
+<img src="Atlas/Utilities/Images/UL_LinkedInLearning_QR.png" alt="" style="object-fit: scale-down">
+</div>
+
+<aside class="notes"><p>If you are creating your account for the first time on LinkedIn Learning, you will likely be asked a couple of questions by the platform so that it can distil down the courses that it will present to you. So it may ask you questions like what sort of skills are you most interested in, business skills, content creation skills, software development skills, etc. It will then match available content based on the skills that you have identified in your preferences.
+Another thing that you may be asked during this account creation process is if you wish to connect your LinkedIn profile (some of you may already have a personal LinkedIn profile set up), with your UL LinkedIn Learning account.
+I don’t believe that you have to do this but there are a few benefits to doing so at this point. For e.g. when you are on your LinkedIn profile you can quickly click one button and it will jump you straight into LinkedIn Learning so you can seamlessly go between those 2 connect platforms.
+Another benefit will be that the recommendations for courses and content that LinkedIn Learning will present to you will then be built around some of the businesses and people that you follow and the associated skills that LinkedIn Learning believes would be helpful for you to know. As an example of this, if you are interested in management and leadership positions on your LinkedIn profile, you will start to notice some content fed to you around that in LinkedIn Learning as well.
+The other benefit of connecting your LinkedIn account to LinkedIn Learning is that you get access to a course Q&amp;A panel. And what that allows you to do is, when you’re taking a course, access sort of a forum for that individual course, where you can interact with other viewers and also occasionally, you may be able to interact with the course tutor or presenter as well. So the Q&amp;A is quite a useful one and I’ll show you where you can find that later in the workshop.
+The final benefit of connecting your accounts together that I will speak to before diving into the demo here, is that you can easily publish any certificates you earn in LinkedIn Learning directly to your LinkedIn profile. This is a great way of letting prospective employers know that you are completing courses and developing your skills. So rather than sending employers separate certificates or multiple links to different ones you’ve earned, you can publish them to one place and they can be viewed in one place.
+If you decide not to connect that should be fine as well, you can decide to connect your accounts or profiles together at a later time if you wish to.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 2. Navigating the LinkedIn Learning interface and setting a learning goal
+</div>
+
+<aside class="notes"><p>Whether you are a student or staff member your interface view should look quite similar to what you will see here on my screen, with the exception of this particular menu in the upper right hand side.</p>
+<p>Nice looking interface with video thumbnails representing courses, who the tutors are, and approx how long the content or course is to watch straight through from start to finish.</p>
+<p>Work in a carousel format.
+Featured courses change from time to time and can be quite topical.
+Walk through.
+The Browse Button helps you explore content and courses related to 3 overarching categories that LiL has defined, business, creative and technology.
+A learning path is a collection of courses that take you through a journey to learn more about the particular role for e.g. Become a photographer.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 3. Searching and filtering the library for particular courses or videos
+</div>
+
+<aside class="notes"><p>Now let’s look at some ways you can search and filter the LiL library of courses for particular video content or courses that you might like to see.
+Browse button.
+Search bar.</p>
+<p>Filters on Left hand side, Type, Level, Software, etc.
+Sort by: Best match, Newest, etc.</p>
+<p>Go into course.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 4. Navigating and viewing a course and understanding the playback options
+</div>
+
+<aside class="notes"><p>Explore sections or groups.
+Highlight with a green dot when finished.
+Save bookmarks.
+Can create a collection with saved bookmarks later on.</p>
+<p>Instructor details. Link to view them on LinkedIn.</p>
+<p>Exercise Files.</p>
+<p>Video player controls.</p>
+<p>All courses have captions. Hugely beneficial.</p>
+<p>Overview, Q&amp;A, Notebook (timestamped notes, very handy feature), Transcript (clickable and will jump video to that point in transcript, and also searchable by keyword, in the course/in the video.)</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 5. Downloading and using course exercise files
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 6. Saving videos and creating a custom collection (playlist)
+</div>
+
+<aside class="notes"><p>Firstly create the blank placeholder shell for a collection. Give it a title and description. Let’s say ‘Illustrator basics 2022 - Art &amp; Design Students’
+Description - A short collection of video introducing some basic concepts within Adobe Illustrator, 2022.</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 7. Sharing collections, courses and videos with other users
+</div>
+
+<aside class="notes"><p>Share button within collections. Only creates a link that you can then share, does not send everyone a notification.</p>
+<p>For UL lecturers
+Little bit of code to add to the end of the URL.
+Open new tab and paste in ”&amp;auth=true”
+The copy and share that updated link.</p>
+<p>Next, sharing a specific video or course with someone.
+Video - use the URL in the address bar
+Course - use the Share option in upper right side of video
+Add “&amp;auth=true” to both</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# 8. Viewing learning history and accessing certificates of completion
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Summary & Review
+1. Accessing and Logging into LinkedIn Learning ✅
+2. Navigating the LinkedIn Learning interface and setting a learning goal ✅
+3. Searching and filtering the library for particular courses or videos ✅
+4. Navigating and viewing a course and understanding the playback options ✅
+5. Downloading and using course exercise files ✅
+6. Saving videos and creating a custom collection (playlist) ✅
+7. Sharing collections, courses and videos with other users ✅
+8. Viewing learning history and accessing certificates of completion ✅
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+# Thank You
+<img src="Atlas/Utilities/Images/LevULUp-logo-full-solid-ulgreen.png" alt="" style="width: 350px; object-fit: fill">
+
+# Introduction to LinkedIn Learning for Students
+
+## David Moloney
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 700px; width: 960px; min-height: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="Atlas/Utilities/Images/LevULUp_LiL_OutroSlide.png" alt="" style="object-fit: scale-down">
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":960,"height":700,"margin":0.04,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
